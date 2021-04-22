@@ -1,0 +1,25 @@
+﻿@model To_Do.Models.ToDo
+
+
+<h2>YAPILACAK GÜNCELLE</h2>
+@using (Html.BeginForm("Update", "Yapılacaklar", FormMethod.Post))
+{
+    <div style="margin-bottom:15px"></div>
+    <div class="form-group">
+        <div style="margin-bottom: 15px">
+            @Html.TextBoxFor(k => k.Id, new { hidden = "visible" })
+        </div>
+        <div style="margin-bottom:15px ">
+            <label></label>
+            @Html.TextBoxFor(k => k.Describe, new { @class = "form-control" })
+        </div>
+        @*<div style="margin-bottom:15px ">
+                <label>BASIM YILI</label>
+                @Html.DropDownListFor(k => k.isFinished, (List<SelectListItem>)ViewBag.dgr, new { @class = "form-control" })
+            </div>*@
+    </div>
+    <div>
+        <button class="btn btn-warning">Güncelle</button>
+        <input type="hidden" name="Describe" value="True" />
+    </div>
+}

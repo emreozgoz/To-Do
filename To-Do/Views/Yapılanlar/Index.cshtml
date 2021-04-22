@@ -1,0 +1,29 @@
+﻿@using To_Do.Models
+@model List<ToDo>
+
+
+<br />
+<h2>Yapılanlar</h2>
+@using (Html.BeginForm("Index", "Yapılanlar", FormMethod.Get))
+{
+    @*<div style="margin-bottom: 15px; margin-top: 15px;">
+            <b>Aranacak Kitabı Giriniz: </b> @Html.TextBox("p")
+            <input type="submit" value="Ara" />
+        </div>*@
+}
+
+<table class="table table-striped">
+    <tr>
+        <br />
+        <th>No</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+         
+            <td>@item.Describe</td>
+            
+        </tr>
+    }
+
+</table>
